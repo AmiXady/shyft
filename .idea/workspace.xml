@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdbe8a67-9929-4cdc-be8a-32bf33474b39" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="300818K7gkLygAmbhRxfMmJzzlG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.FileLineReaderTest.shouldReadLinesCorrectly.executor": "Run",
+    "JUnit.InputFileParserTest.executor": "Run",
+    "JUnit.InputFileValidatorTest.executor": "Run",
+    "JUnit.InputFileValidatorTest.shouldFailIfFileDoesNotExist.executor": "Run",
+    "JUnit.InputFileValidatorTest.shouldFailIfUnsupportedExtension.executor": "Run",
+    "JUnit.InputFileValidatorTest.shouldPassValidationWhenAllChecksAreOk.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady",
+    "onboarding.tips.debug.path": "/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady/Main.java",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/kz/amixady" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kz.amixady.Main" />
+      <module name="shyft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kz.amixady.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileLineReaderTest.shouldReadLinesCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shyft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="input.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="input" />
+      <option name="MAIN_CLASS_NAME" value="input.FileLineReaderTest" />
+      <option name="METHOD_NAME" value="shouldReadLinesCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputFileParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shyft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="input.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="input" />
+      <option name="MAIN_CLASS_NAME" value="input.InputFileParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputFileValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shyft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="input.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="input" />
+      <option name="MAIN_CLASS_NAME" value="input.InputFileValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputFileValidatorTest.shouldPassValidationWhenAllChecksAreOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shyft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="input.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="input" />
+      <option name="MAIN_CLASS_NAME" value="input.InputFileValidatorTest" />
+      <option name="METHOD_NAME" value="shouldPassValidationWhenAllChecksAreOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FileLineReaderTest.shouldReadLinesCorrectly" />
+        <item itemvalue="JUnit.InputFileValidatorTest.shouldPassValidationWhenAllChecksAreOk" />
+        <item itemvalue="JUnit.InputFileValidatorTest" />
+        <item itemvalue="JUnit.InputFileParserTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdbe8a67-9929-4cdc-be8a-32bf33474b39" name="Changes" comment="" />
+      <created>1752752911638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752752911638</updated>
+    </task>
+    <servers />
+  </component>
+</project>
