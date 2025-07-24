@@ -8,17 +8,18 @@ import kz.amixady.sharp.WarningCollector;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Optional;
 
 
 //фабрика, которая поочерёдно создает объекты LineReader для чтения строк из файлов
 public class LineReaderFactory {
-    private final String [] inputFiles;
+    private final List<String> inputFiles;
     private final WarningCollector warningCollector;
     private final InputFileValidator validator;
     private int currentIndex = 0;
 
-    public LineReaderFactory(String[] inputFiles,
+    public LineReaderFactory(List<String> inputFiles,
                              WarningCollector warningCollector,
                              InputFileValidator validator) {
         this.inputFiles = inputFiles;
@@ -27,8 +28,8 @@ public class LineReaderFactory {
     }
 
     public Optional<LineReader> getNextReader() {
-        while (currentIndex < inputFiles.length) {
-            Path path = Paths.get(inputFiles[currentIndex++]);
+        while (currentIndex < inputFiles.size()) {
+            Path path = Paths.get(inputFiles.get(currentIndex++));
             try {
                 validator.validate(path);// throws FileOpenException;
                 return Optional.of(new FileLineReader(path)); //toje

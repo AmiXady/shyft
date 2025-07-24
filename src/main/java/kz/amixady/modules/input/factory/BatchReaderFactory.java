@@ -5,6 +5,8 @@ import kz.amixady.modules.input.inputfile.InputFileValidator;
 import kz.amixady.modules.input.reader.MultiFileBatchReader;
 import kz.amixady.sharp.WarningCollector;
 
+import java.util.List;
+
 public class BatchReaderFactory {
     private final WarningCollector warningCollector;
 
@@ -12,7 +14,7 @@ public class BatchReaderFactory {
         this.warningCollector = warningCollector;
     }
 
-    public BatchReader create(String [] files){
+    public BatchReader create(List<String> files){
         InputFileValidator inputFileValidator =
                 new InputFileValidator();
         LineReaderFactory lineReaderFactory =

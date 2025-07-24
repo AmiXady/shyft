@@ -5,9 +5,7 @@ import kz.amixady.modules.input.factory.LineReaderFactory;
 import kz.amixady.sharp.WarningCollector;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static kz.amixady.sharp.Constants.BATCH_SIZE;
 import static kz.amixady.sharp.WarninMessage.FILE_READ_ERROR;
@@ -24,9 +22,8 @@ public class MultiFileBatchReader implements BatchReader {
     }
 
     @Override
-    public List<String> readNextBatch() {
-        List<String> result =
-                new ArrayList<>(BATCH_SIZE);
+    public Queue<String> readNextBatch() {
+        Queue<String> result = new ArrayDeque<>(BATCH_SIZE);
         while (result.size() < BATCH_SIZE && currentReader != null) {
             tryReadLineInto(result);
         }
@@ -34,7 +31,7 @@ public class MultiFileBatchReader implements BatchReader {
     }
 
 
-    private void tryReadLineInto(List<String> result) {
+    private void tryReadLineInto(Queue<String> result) {
         if (currentReader.isFinished()) {
             closeAndSwitch();
             return;
