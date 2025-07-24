@@ -1,9 +1,9 @@
-package kz.amixady.input.factory;
+package kz.amixady.modules.input.factory;
 
 import kz.amixady.exception.FileOpenException;
-import kz.amixady.input.inputfile.InputFileValidator;
-import kz.amixady.input.reader.io.FileLineReader;
-import kz.amixady.input.reader.LineReader;
+import kz.amixady.modules.input.inputfile.InputFileValidator;
+import kz.amixady.modules.input.reader.io.FileLineReader;
+import kz.amixady.modules.input.reader.LineReader;
 import kz.amixady.sharp.WarningCollector;
 
 import java.nio.file.Path;

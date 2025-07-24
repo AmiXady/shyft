@@ -1,4 +1,4 @@
-package kz.amixady.input.inputfile;
+package kz.amixady.modules.input.inputfile;
 
 //можно добавить любой другой тип для расшиение например md
 

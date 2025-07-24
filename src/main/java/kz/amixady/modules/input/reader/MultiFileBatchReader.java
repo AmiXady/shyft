@@ -1,7 +1,7 @@
-package kz.amixady.input.reader;
+package kz.amixady.modules.input.reader;
 
-import kz.amixady.input.BatchReader;
-import kz.amixady.input.factory.LineReaderFactory;
+import kz.amixady.modules.input.BatchReader;
+import kz.amixady.modules.input.factory.LineReaderFactory;
 import kz.amixady.sharp.WarningCollector;
 
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static kz.amixady.sharp.Constants.BATCH_SIZE;
-import static kz.amixady.sharp.ErrorMessage.FILE_READ_ERROR;
+import static kz.amixady.sharp.WarninMessage.FILE_READ_ERROR;
 
 public class MultiFileBatchReader implements BatchReader {
     private final WarningCollector warningCollector;

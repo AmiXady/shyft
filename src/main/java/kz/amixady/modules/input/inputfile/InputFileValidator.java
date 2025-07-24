@@ -1,12 +1,12 @@
-package kz.amixady.input.inputfile;
+package kz.amixady.modules.input.inputfile;
 
 
 import kz.amixady.exception.FileOpenException;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import static kz.amixady.sharp.ValidationMessage.*;
 
+import static kz.amixady.sharp.ValidationMessage.*;
 
 public class InputFileValidator {
 

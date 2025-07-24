@@ -1,13 +1,13 @@
-package kz.amixady.input.reader.io;
+package kz.amixady.modules.input.reader.io;
 import kz.amixady.exception.FileOpenException;
-import kz.amixady.input.reader.LineReader;
+import kz.amixady.modules.input.reader.LineReader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import static kz.amixady.sharp.ErrorMessage.FILE_OPEN_ERROR;
+import static kz.amixady.sharp.WarninMessage.FILE_OPEN_ERROR;
 
 public class FileLineReader implements LineReader {
     private final BufferedReader bufferedReader;

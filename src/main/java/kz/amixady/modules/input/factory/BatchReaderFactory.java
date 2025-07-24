@@ -1,8 +1,8 @@
-package kz.amixady.input.factory;
+package kz.amixady.modules.input.factory;
 
-import kz.amixady.input.BatchReader;
-import kz.amixady.input.inputfile.InputFileValidator;
-import kz.amixady.input.reader.MultiFileBatchReader;
+import kz.amixady.modules.input.BatchReader;
+import kz.amixady.modules.input.inputfile.InputFileValidator;
+import kz.amixady.modules.input.reader.MultiFileBatchReader;
 import kz.amixady.sharp.WarningCollector;
 
 public class BatchReaderFactory {

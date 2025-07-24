@@ -14,6 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -26,29 +28,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.FileLineReaderTest.shouldReadLinesCorrectly.executor": "Run",
-    "JUnit.InputFileParserTest.executor": "Run",
-    "JUnit.InputFileValidatorTest.executor": "Run",
-    "JUnit.InputFileValidatorTest.shouldFailIfFileDoesNotExist.executor": "Run",
-    "JUnit.InputFileValidatorTest.shouldFailIfUnsupportedExtension.executor": "Run",
-    "JUnit.InputFileValidatorTest.shouldPassValidationWhenAllChecksAreOk.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady",
-    "onboarding.tips.debug.path": "/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady/Main.java",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileLineReaderTest.shouldReadLinesCorrectly.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputFileParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputFileValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputFileValidatorTest.shouldFailIfFileDoesNotExist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputFileValidatorTest.shouldFailIfUnsupportedExtension.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputFileValidatorTest.shouldPassValidationWhenAllChecksAreOk.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/yelzhasiemberdiev/Desktop/shyft/src/main/java/kz/amixady/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/kz/amixady" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/modules_design" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -58,7 +61,7 @@
       <module name="shyft" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kz.amixady.*" />
+          <option name="PATTERN" value="kz.amixady.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

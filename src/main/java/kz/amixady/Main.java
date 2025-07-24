@@ -1,9 +1,11 @@
 package kz.amixady;
 
-import kz.amixady.input.BatchReader;
-import kz.amixady.input.factory.BatchReaderFactory;
-import kz.amixady.sharp.WarningCollector;
 
+import kz.amixady.cli.parser.ParsedArgs;
+import kz.amixady.cli.factory.CliConfigFactory;
+import kz.amixady.cli.factory.OutputConfigFactory;
+import kz.amixady.cli.parser.ArgsParser;
+import kz.amixady.sharp.WarningCollector;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -11,23 +13,17 @@ public class Main {
     public static void main(String[] args) {
         WarningCollector warningCollector =
                 new WarningCollector();
+        ArgsParser argsParser =
+                new ArgsParser(warningCollector);
 
-        String files [] = {"d1.txt","sex/d1.txt","d3.txt"};
+        OutputConfigFactory outputConfigFactory =
+                new OutputConfigFactory();
+        CliConfigFactory cliConfigFactory =
+                new CliConfigFactory(outputConfigFactory);
 
-        BatchReaderFactory batchReaderFactory =
-                new BatchReaderFactory(warningCollector);
+        ParsedArgs parsedArgs = argsParser.parse(args);
 
-        BatchReader batchReader = batchReaderFactory.create(files);
+        var config = cliConfigFactory.create(parsedArgs);
 
-        while(true) {
-            var lines = batchReader.readNextBatch();
-            if(lines.isEmpty()) break;
-            for(String line : lines) {
-                System.out.print(line+" ");
-            }
-            System.out.print("END\n");
-        }
-
-        warningCollector.printAll();
     }
 }

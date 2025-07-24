@@ -1,4 +1,4 @@
-package kz.amixady.input;
+package kz.amixady.modules.input;
 
 import java.util.List;
 

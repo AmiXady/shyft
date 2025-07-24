@@ -1,4 +1,4 @@
-package kz.amixady.input.reader;
+package kz.amixady.modules.input.reader;
 
 
 import java.io.IOException;
