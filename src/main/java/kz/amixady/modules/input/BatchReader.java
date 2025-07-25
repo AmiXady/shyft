@@ -1,7 +1,9 @@
 package kz.amixady.modules.input;
 
-import java.util.Queue;
+import kz.amixady.modules.line.Line;
+
+import java.util.List;
 
 public interface BatchReader {
-    Queue<String> readNextBatch();
+    List<Line> readNextBatch();
 }
