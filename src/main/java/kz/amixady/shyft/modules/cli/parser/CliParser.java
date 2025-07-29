@@ -2,7 +2,6 @@ package kz.amixady.shyft.modules.cli.parser;
 
 
 
-import kz.amixady.shyft.modules.cli.Args;
 import kz.amixady.shyft.modules.cli.enums.Flag;
 import kz.amixady.shyft.modules.cli.enums.Option;
 import kz.amixady.shyft.shared.WarningCollector;
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 
 
-@Component()
+@Component
 public class CliParser implements Parser {
 
     private final WarningCollector warningCollector;

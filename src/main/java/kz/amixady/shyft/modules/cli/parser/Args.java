@@ -1,4 +1,4 @@
-package kz.amixady.shyft.modules.cli;
+package kz.amixady.shyft.modules.cli.parser;
 
 
 import kz.amixady.shyft.modules.cli.enums.Flag;
