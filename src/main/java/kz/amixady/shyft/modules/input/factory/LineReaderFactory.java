@@ -3,7 +3,7 @@ package kz.amixady.shyft.modules.input.factory;
 
 import kz.amixady.shyft.exeptions.FileOpenException;
 import kz.amixady.shyft.modules.input.inputfile.InputFileValidator;
-import kz.amixady.shyft.modules.input.reader.LineReader;
+import kz.amixady.shyft.modules.input.reader.io.LineReader;
 import kz.amixady.shyft.modules.input.reader.io.FileLineReader;
 import kz.amixady.shyft.shared.WarningCollector;
 

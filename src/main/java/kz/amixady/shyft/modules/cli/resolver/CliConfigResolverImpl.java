@@ -14,8 +14,9 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CliConfigResolverImpl implements CliConfigResolver {
     private final StatsModeResolver statsModeResolver;
-    private final Parser parser;
     private final OutputConfigFactory outputConfigFactory;
+    private final Parser parser;
+
 
     @Override
     public CliConfig resolve(String[] args) {

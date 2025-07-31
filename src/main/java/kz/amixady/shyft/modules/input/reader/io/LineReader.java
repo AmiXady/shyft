@@ -1,4 +1,4 @@
-package kz.amixady.shyft.modules.input.reader;
+package kz.amixady.shyft.modules.input.reader.io;
 
 
 

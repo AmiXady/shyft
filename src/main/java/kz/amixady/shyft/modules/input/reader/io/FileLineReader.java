@@ -3,7 +3,6 @@ package kz.amixady.shyft.modules.input.reader.io;
 
 import kz.amixady.shyft.exeptions.FileOpenException;
 import kz.amixady.shyft.exeptions.FileReadException;
-import kz.amixady.shyft.modules.input.reader.LineReader;
 
 import java.io.BufferedReader;
 import java.io.IOException;

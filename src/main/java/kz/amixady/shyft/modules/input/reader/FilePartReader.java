@@ -4,35 +4,38 @@ package kz.amixady.shyft.modules.input.reader;
 
 import kz.amixady.shyft.exeptions.FileReadException;
 import kz.amixady.shyft.modules.input.factory.LineReaderFactory;
+import kz.amixady.shyft.modules.input.reader.io.LineReader;
 import kz.amixady.shyft.shared.WarningCollector;
-import kz.amixady.shyft.shared.dto.Line;
-import kz.amixady.shyft.shared.interfaces.BatchReader;
-import kz.amixady.shyft.shared.interfaces.LineTypeResolver;
+import kz.amixady.shyft.shared.dto.StructuredLines;
+import kz.amixady.shyft.shared.interfaces.LineAnalyzer;
+import kz.amixady.shyft.shared.interfaces.PartReader;
+import kz.amixady.shyft.modules.lineanalyzer.line.LineTypeResolver;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+import javax.sound.sampled.Line;
 import java.io.IOException;
 import java.util.*;
 
 import static kz.amixady.shyft.shared.constants.Constants.BATCH_SIZE;
 
 
-public class MultiFileBatchReader implements BatchReader {
+//читает данные из переданных файлов частями, то есть за раз возвращает определеное количество строк из файлов
+
+
+@Component
+@RequiredArgsConstructor
+public class FilePartReader implements PartReader {
 
     private final WarningCollector warningCollector;
     private final LineReaderFactory lineReaderFactory;
-    private final LineTypeResolver lineTypeResolver;
+
+    private final LineAnalyzer lineTypeResolver;
     private LineReader currentReader;
 
-    public MultiFileBatchReader(WarningCollector warningCollector,
-                                LineReaderFactory lineReaderFactory,
-                                LineTypeResolver lineTypeResolver) {
-        this.warningCollector = warningCollector;
-        this.lineReaderFactory = lineReaderFactory;
-        this.lineTypeResolver = lineTypeResolver;
-        switchToNextReader();
-    }
 
     @Override
-    public List<Line> readNextBatch() {
+    public StructuredLines readParts() {
         List<Line> result = new ArrayList<>(BATCH_SIZE);
         while (result.size() < BATCH_SIZE && currentReader != null) {
             tryReadLineInto(result);
