@@ -1,6 +1,6 @@
 package kz.amixady.shyft;
 import kz.amixady.shyft.modules.cli.resolver.CliConfigResolverImpl;
-import kz.amixady.shyft.modules.input.factory.BatchReaderFactory;
+import kz.amixady.shyft.modules.input.factory.PartReaderFactory;
 import kz.amixady.shyft.shared.WarningCollector;
 import kz.amixady.shyft.shared.dto.CliConfig;
 import kz.amixady.shyft.shared.dto.Line;
@@ -23,11 +23,11 @@ public class ShyftApplication {
 
         CliConfig cliConfig = cliConfigResolver.resolve(args1);
 
-        BatchReaderFactory batchReaderFactory =
-                context.getBean(BatchReaderFactory.class);
+        PartReaderFactory partReaderFactory =
+                context.getBean(PartReaderFactory.class);
 
         PartReader partReader =
-                batchReaderFactory.create(cliConfig.inputFiles());
+                partReaderFactory.create(cliConfig.inputFiles());
 
         while(true) {
             var batch = partReader.readNextBatch();

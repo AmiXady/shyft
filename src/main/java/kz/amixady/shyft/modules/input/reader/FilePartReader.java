@@ -9,7 +9,6 @@ import kz.amixady.shyft.shared.WarningCollector;
 import kz.amixady.shyft.shared.dto.StructuredLines;
 import kz.amixady.shyft.shared.interfaces.LineAnalyzer;
 import kz.amixady.shyft.shared.interfaces.PartReader;
-import kz.amixady.shyft.modules.lineanalyzer.line.LineTypeResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -23,8 +22,6 @@ import static kz.amixady.shyft.shared.constants.Constants.BATCH_SIZE;
 //читает данные из переданных файлов частями, то есть за раз возвращает определеное количество строк из файлов
 
 
-@Component
-@RequiredArgsConstructor
 public class FilePartReader implements PartReader {
 
     private final WarningCollector warningCollector;
@@ -33,18 +30,24 @@ public class FilePartReader implements PartReader {
     private final LineAnalyzer lineTypeResolver;
     private LineReader currentReader;
 
+    public FilePartReader(WarningCollector warningCollector,
+                          LineReaderFactory lineReaderFactory,
+                          LineAnalyzer lineTypeResolver) {
+        this.warningCollector = warningCollector;
+        this.lineReaderFactory = lineReaderFactory;
+        this.lineTypeResolver = lineTypeResolver;
+    }
 
     @Override
     public StructuredLines readParts() {
-        List<Line> result = new ArrayList<>(BATCH_SIZE);
-        while (result.size() < BATCH_SIZE && currentReader != null) {
-            tryReadLineInto(result);
+        List<String> piece = new ArrayList<>(BATCH_SIZE);
+        while (piece.size() < BATCH_SIZE && currentReader != null) {
+            readLineInto(piece);
         }
-        return result;
+        return lineTypeResolver.analyze(piece);
     }
 
-
-    private void tryReadLineInto(List<Line> result) {
+    private void readLineInto(List<String> piece ) {
         if (currentReader.isFinished()) {
             closeAndSwitch();
             return;
@@ -54,7 +57,7 @@ public class FilePartReader implements PartReader {
             String line = currentReader.readLine();
             if (line != null) {
                 if(!line.isBlank()) {
-                    result.add(lineTypeResolver.resolve(line));
+                    piece.add(line);
                 }
             } else {
                 closeAndSwitch();
